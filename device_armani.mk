@@ -19,6 +19,11 @@ PRODUCT_COPY_FILES += \
 
 $(call inherit-product, build/target/product/full.mk)
 
+
+# libwebcore
+#PRODUCT_COPY_FILES := \
+#    device/xiaomi/armani/lib/libwebviewchromium.so:system/lib/#libwebviewchromium.so
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_armani
 PRODUCT_DEVICE := armani
