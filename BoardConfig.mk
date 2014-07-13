@@ -9,12 +9,16 @@ LOCAL_PATH := device/xiaomi/armani
 
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
-TARGET_BOARD_PLATFORM := unknown
+TARGET_BOARD_PLATFORM := msm8226
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := cortex-a7
 ARCH_ARM_HAVE_TLS_REGISTER := true
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.locale.language := zh \
+    ro.product.locale.region := CN
 
 TARGET_BOOTLOADER_BOARD_NAME := armani
 
@@ -24,7 +28,6 @@ BOARD_MKBOOTIMG_ARGS += --dt device/xiaomi/armani/prebuilt/boot.img-dt
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_DT_SIZE := 5605376
 
 
 # fix this up by examining /proc/mtd on a running device

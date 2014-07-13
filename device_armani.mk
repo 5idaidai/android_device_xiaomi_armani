@@ -3,6 +3,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
+# common msm8226&qcom configs
+$(call inherit-product, device/xiaomi/msm8226-common/msm8226.mk)
+$(call inherit-product, device/xiaomi/qcom-common/qcom-common.mk)
+
 $(call inherit-product-if-exists, vendor/xiaomi/armani/armani-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/xiaomi/armani/overlay
